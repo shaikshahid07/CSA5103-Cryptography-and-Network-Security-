@@ -1,1 +1,17 @@
+#2. Python Program for Monoalphabetic Substitution Cipher
 
+text = input("Enter the text: ")
+key = input("Enter the 26-letter key: ")
+alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+result = ""
+key = key.upper()
+text = text.upper()
+if len(key) != 26 or len(set(key)) != 26 or not key.isalpha():
+    print("Invalid key")
+else:
+    for ch in text:
+        if ch in alphabet:
+            result += key[alphabet.index(ch)]
+        else:
+            result += ch
+    print("Encrypted text:", result)
