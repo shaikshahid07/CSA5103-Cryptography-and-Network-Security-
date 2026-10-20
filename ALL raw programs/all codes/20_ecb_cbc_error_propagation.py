@@ -1,7 +1,0 @@
-print("20. ECB vs CBC error propagation")
-print("a) A bit error in transmitted C1 under CBC:")
-print("- P1 is corrupted unpredictably.");print("- Same bit position in P2 flips because P2 = D(C2) XOR C1.");print("- P3 onward are unaffected if block alignment remains intact.")
-print("b) If source P1 changes before CBC encryption:")
-print("- C1 changes and affects subsequent CBC chaining/ciphertext blocks.");print("- Receiver gets corrupted P1 and later plaintext blocks can also be corrupted.")
-print("ECB: a corrupted ciphertext block normally affects only its matching plaintext block.")
-print("Use authenticated encryption such as AES-GCM in real systems.")
